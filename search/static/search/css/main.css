@@ -1,0 +1,104 @@
+.search_conatiner
+{
+    background-image: url(../img/homepage_header_background.svg);
+    background-position: 50%;
+    background-repeat: no-repeat;
+    height: 305px;
+    margin-top: 120px;
+}
+.search_form
+{
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+.search_bar
+{
+    height: 48px;
+    max-width: 100%;
+    padding: 0 0 0 48px;
+    border: 1px solid #fff;
+    border-radius: 8px;
+    width: 100%;
+    font-size: 16px;
+    position: relative;
+    box-sizing: border-box;
+    outline: none;
+    box-shadow: 0 1px 2px 0 rgba(60, 64, 67, .30), 0 1px 3px 1px rgba(60, 64, 67, .15);
+    /* box-shadow: 0 10px 20px rgba(3, 27, 78, .1); */
+    transition: all .25s cubic-bezier(.645, .045, .355, 1);
+}
+
+.search_bar:focus {
+    border-color: #453bff;
+}
+
+input[type=number],input[type=text] {
+    display: block ;
+    width: 100%;
+    height: calc(1.5em + .75rem + 2px);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #eee;
+    border-radius: .3rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+.main {
+    background:linear-gradient(to right, #a1ffce, #faffd1);
+    border: 1px solid  #ddd;
+    border-radius: 0.25rem;
+    box-shadow: 0 10px 20px rgba(3, 27, 78, .1);
+    padding:35px;
+    width: 800px;
+    margin: 0 auto;
+  height:450px;
+  -ms-transform: translate(0px,100px); /* IE 9 */
+      -webkit-transform: translate(0px,100px); /* Safari */
+     transform: translate(0px,100px); /* Standard syntax */
+}
+.profile_pic{
+  height:250px;
+  width:250px;
+  float:left;
+  box-shadow: 0 10px 20px rgba(3, 27, 78, .1);
+  border-radius: 0.25;
+  -ms-transform: translate(0px,60px); /* IE 9 */
+      -webkit-transform: translate(0px,60px); /* Safari */
+     transform: translate(0px,60px); /* Standard syntax */
+}
+.data{
+  float:left;
+  width:420px;
+  margin:0 0 0 35px;
+}
+.xl_font{
+  font-size:25px;
+}
+.small_font{
+  font-size:14px;
+}
+.light_gray{
+  color:#222;
+}
+
+.down_btn_container {
+  width:100%;
+  float:left;
+  padding:35px;
+  
+}
+.connect{
+  margin:0 60%;
+}
+/* Use a media query to add a break point at 800px: */
+@media screen and (max-width:800px) {
+.main {
+    padding:0px;
+    width: 400px;
+}
+}

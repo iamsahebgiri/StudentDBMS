@@ -1,0 +1,40 @@
+{% extends 'search/header.html' %}
+{% load static %}
+
+{% block content %}
+<div class="cover-container  d-flex h-100 p-3 mx-auto flex-column">
+    <header class=" mb-auto">
+
+    </header>
+
+    <main role="main" class="inner text-center cover">
+        <div class="search_conatiner">
+            <img class="mb-4" src="{% static 'search/img/logo_search.png' %}" alt="Evolution" height="80px">
+            <form action="post" method="post" class="search_form">
+                {% csrf_token %}
+                <input type="text" id="inputText" class="search_bar" placeholder="Search for students" required=""
+                    autofocus="">
+            </form>
+            <br>
+            <a href="/add" class="btn btn-primary">Add Student</a>
+        </div>
+    
+        <div class="row">
+            {% for s in students %}
+            <div class="col-sm-2">
+                <div class="card">
+                    <img src="{{ s.profile_pic_link }}" class="card-img-top" alt="{{ s.fullname }}">
+                    <div class="card-body">
+                        <p class="card-text"><a href="view/{{ s.roll }}">{{ s.fullname }}</a></p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+
+    </footer>
+</div>
+{% endblock %}

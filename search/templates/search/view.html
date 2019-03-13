@@ -1,0 +1,48 @@
+{% extends 'search/header.html' %}
+{% block content %}
+
+<div class="main" >
+    <div class="profile_pic"><img src="{{ st.profile_pic_link }}" height="250" width="250" /></div>
+    <div class="data">
+        <span class="xl_font">I'm <b>{{ st.fullname }}</b><br /></span>
+        {{ st.goal }}, {{ st.standard }}
+        <hr width="100%" noshade />
+        <table style="width:100%" class="small_font">
+            <tr>
+                <td><strong>FATHER</strong></td>
+                <td class="light_gray">{{ st.f_name }}</td>
+            </tr>
+
+            <tr>
+                <td><strong>MOTHER</strong></td>
+                <td class="light_gray">{{ st.m_name }}</td>
+            </tr>
+
+            <tr>
+                <td><strong>PERMANENT ADDRESS</strong></td>
+                <td class="light_gray"> {{ st.address|safe }} </td>
+            </tr>
+
+            <tr>
+                <td><strong>BIRTHDAY</strong></td>
+                <td class="light_gray">{{ st.birth_date }}</td>
+            </tr>
+
+            <tr>
+                <td><strong>BLOOD GROUP</strong></td>
+                <td class="light_gray">{{ st.blood_group }} </td>
+            </tr>
+            <tr>
+                <td><strong>CONTACT</strong></td>
+                <td class="light_gray">{{ st.contact }}</td>
+            </tr>
+            <tr>
+                <td><strong>ADMISSION NO</strong></td>
+                <td class="light_gray">{{ st.admission_no }}</td>
+            </tr>
+        </table>
+
+    </div>
+    <div class="down_btn_container"><a class="connect btn btn-primary" target="_blank" href="{{ st.social_links }}">CONNECT</a></div>
+</div>
+{% endblock %}
